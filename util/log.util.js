@@ -1,16 +1,20 @@
 "use strict"
 
+const logWithTag = (tag, text) => {
+    console.log(`[${tag}] ${new Date()} | ${text} [${tag}]`);
+}
+
 class Log {
-    info(text){
-        console.log(`[INFO] ${text} [INFO]`)
+    info(text) {
+        logWithTag('INFO', text);
     }
 
-    warning(text){
-        console.log(`[WARNING] ${text} [WARNING]`)
+    warning(text) {
+        logWithTag('WARNING', text);
     }
 
-    error(text){
-        console.log(`[ERROR] ${text} [ERROR]`)
+    error(text) {
+        logWithTag('ERROR', text);
     }
 }
 
