@@ -1,0 +1,23 @@
+{
+  "name": "jscourse",
+  "version": "1.0.0",
+  "description": "Project for Mocha test",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a1qa4and/JSCourse.git"
+  },
+  "author": "Ovadovich A",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a1qa4and/JSCourse/issues"
+  },
+  "homepage": "https://github.com/a1qa4and/JSCourse#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  }
+}
