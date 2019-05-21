@@ -1,9 +1,12 @@
-"use strict"
+"use strict";
+
+var dateFormat = require('dateformat');
+const oneDayInMilliseconds = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
 
 class DateTime {
 
     today() {
-        var date = new Date();
+        let date = new Date();
         date.setUTCHours(0, 0, 0, 0);
         return date;
     }
@@ -14,8 +17,15 @@ class DateTime {
     }
 
     daysDifference(dateLeft, dateRight) {
-        var oneDayInMilliseconds = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
         return parseInt((dateLeft - dateRight) / oneDayInMilliseconds);
+    }
+
+    getDateBeforeToday(daysBefore) {
+        return new Date(this.today() - daysBefore * oneDayInMilliseconds);
+    }
+
+    dateFormat(date, format){
+        return dateFormat(date, format);
     }
 
 }
