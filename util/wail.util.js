@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 const logger = require('./log.util');
 
@@ -9,8 +9,8 @@ const doWait = (action, interval, expectedValue) => {
             setTimeout(() => resolve(), interval);
         }
         setTimeout(() => reject(actualValue), interval);
-    })
-}
+    });
+};
 
 const retrier = (action, maxCount, interval, expectedValue, count = 0) => {
     count++;
@@ -26,8 +26,8 @@ const retrier = (action, maxCount, interval, expectedValue, count = 0) => {
         } else {
             return retrier(action, maxCount, interval, expectedValue, count);
         }
-    })
-}
+    });
+};
 
 class Wait {
 

@@ -1,4 +1,5 @@
 const { describe, it } = require('mocha');
+/* eslint-disable no-unused-vars */
 const should = require('chai').should();
 const { expect } = require('chai');
 const logger = require('../util/log.util');

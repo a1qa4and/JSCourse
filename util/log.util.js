@@ -1,8 +1,9 @@
-"use strict"
+"use strict";
 
 const logWithTag = (tag, text) => {
+    /* eslint-disable no-console */
     console.log(`[${tag}] ${new Date()} | ${text} [${tag}]`);
-}
+};
 
 class Log {
     info(text) {
