@@ -39,11 +39,14 @@ class Browser {
     }
 
     async findElement(by, name) {
-        try{
-            return this.driver.findElement(by);
-        } catch (error) {
+        return this.driver.findElement(by).catch((error) => {
             logger.warning(`Cannot find element ${error}: ${name}`);
-        }
+        });
+    }
+
+    async isElementPresent(by, name){
+        let element = await this.findElement(by, name);
+        return element == undefined ? false : element.isDisplayed();
     }
 }
 

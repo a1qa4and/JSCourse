@@ -18,7 +18,7 @@ describe('Wait Test', () => {
     it('should wait for false "true"', () => {
         const wait = new Wait();
         return wait.forFalse(() => false, 5, 1000).then((result) => assert.isTrue(result));
-    })
+    });
 
     it('should wait for false "false"', () => {
         const wait = new Wait();

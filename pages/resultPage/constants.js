@@ -1,8 +1,8 @@
 const { By } = require('selenium-webdriver');
 
 const locators = {
-    page: By.id('viewport'),
-    searchInput: By.name('q')
+    page: By.id('hdtbSum'),
+    resultStats: By.id('resultStats')
 };
 
 module.exports = { locators };
